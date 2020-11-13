@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ClientController">
+    <children>
+        <Button fx:id="logoutBtn" layoutX="390.0" layoutY="140.0" mnemonicParsing="false" onAction="#prevScene" prefHeight="38.0" prefWidth="109.0" text="ログアウト">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <TextArea fx:id="areaText" layoutX="47.0" layoutY="197.0" onMouseDragEntered="#SelectOne" prefHeight="254.0" prefWidth="523.0" />
+        <Button fx:id="btnEmit" layoutX="70.0" layoutY="141.0" mnemonicParsing="false" onAction="#ClientConnect" prefHeight="37.0" prefWidth="143.0" text="メッセージ受信">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button layoutX="260.0" layoutY="140.0" mnemonicParsing="false" onAction="#ClientSaveImages" prefHeight="38.0" prefWidth="98.0" text="画像受信">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <ImageView fx:id="img" fitHeight="126.0" fitWidth="159.0" layoutX="401.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="ipInput" layoutX="70.0" layoutY="95.0" prefHeight="34.0" prefWidth="120.0" text="IPアドレス入力">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="IP" layoutX="190.0" layoutY="100.0" prefHeight="25.0" prefWidth="215.0" />
+      <Pane fx:id="pane" layoutX="-3.0" prefHeight="77.0" prefWidth="641.0">
+         <children>
+            <Label layoutX="243.0" layoutY="15.0" prefHeight="48.0" prefWidth="190.0" text="Chat App" textFill="#f2efef">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="70.0" layoutY="121.0" text="172.31.99.53" />
+      <Pane fx:id="pane2" layoutX="1.0" layoutY="468.0" prefHeight="110.0" prefWidth="602.0">
+         <children>
+              <Button fx:id="iconBtn" layoutX="53.0" layoutY="49.0" mnemonicParsing="false" onAction="#SelectOne" prefHeight="48.0" prefWidth="72.0" text="画像">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+              <TextField fx:id="DataText" layoutX="134.0" layoutY="49.0" prefHeight="48.0" prefWidth="284.0" />
+            <Button layoutX="431.0" layoutY="8.0" mnemonicParsing="false" onAction="#ClientSendImages" prefHeight="38.0" prefWidth="143.0" styleClass="btnStyle" text="画像送信">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+              <Button layoutX="429.0" layoutY="55.0" mnemonicParsing="false" onAction="#ClientSendServer" prefHeight="38.0" prefWidth="143.0" styleClass="btnStyle" text="メッセージ送信">
+                  <font>
+                      <Font size="17.0" />
+                  </font>
+              </Button>
+            <Label fx:id="src" layoutX="54.0" layoutY="14.0" prefHeight="32.0" prefWidth="365.0" />
+         </children>
+      </Pane>
+    </children>
+</Pane>
